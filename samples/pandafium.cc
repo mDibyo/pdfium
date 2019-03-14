@@ -234,6 +234,7 @@ static void WriteJpg(const char* pdf_name, int num, const void* buffer_void,
    * since the defaults depend on the source color space.)
    */
   jpeg_set_defaults(&cinfo);
+  jpeg_simple_progression(&cinfo);
 
   jpeg_start_compress(&cinfo, TRUE);
 
